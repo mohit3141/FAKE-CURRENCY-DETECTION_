@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Fake Currency Detector</title>
+   <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheetsheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/static/favicon.ico.jpg" type="favicon.ico.jpg">
+    <style>
+        /* Background Image */
+        body {
+            background-image: "https://www.shutterstock.com/image-photo/indian-currency-note-fake-real-checking-2287787267";
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Fake Currency Detector</h1>
+            <p>Upload an image of the currency note to check its authenticity.</p>
+
+            <!-- Custom Choose File Button -->
+            <div class="file-upload">
+                <label for="currencyImage" class="custom-file-upload" id="fileLabel">
+                    <i class="fas fa-upload"></i> Choose File
+                </label>
+                <input type="file" id="currencyImage" accept="image/*">
+            </div>
+
+
+<!-- Image Preview -->
+<img id="uploadedImage" src="" alt="Uploaded Preview">
+
+
+
+            <!-- Check Currency Button -->
+            <button id="submitBtn" class="btn">
+                <i class="fas fa-check"></i> Check Currency
+            </button>
+
+            <!-- Result Display -->
+            <div id="result" class="hidden"></div>
+        </div>
+    </div>
+       <!-- JavaScript -->
+    <script src="/static/script.js"></script>
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('currencyImage').addEventListener('change', function() {
+            var fileLabel = document.getElementById('fileLabel');
+            if (this.files && this.files[0]) {
+                fileLabel.innerHTML = "<i class='fas fa-upload'></i> Image uploaded";
+            }
+        });
+    </script>
+</body>
+</html>
